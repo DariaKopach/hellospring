@@ -16,7 +16,7 @@
             <br>
             Description:<@spring.formInput "teacherForm.description" "" "text"/>
             <br>
-            Telephone:<@spring.formInput "teacherForm.mobile" "" "text"/>
+            Mobile:<@spring.formInput "teacherForm.mobile" "" "text"/>
             <br>
             <input type="submit" value="update"/>
         </form>
