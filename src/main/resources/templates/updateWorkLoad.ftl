@@ -14,7 +14,7 @@
         <form name="workLoad" action="" method="POST">
             Teacher:<@spring.formSingleSelect "workLoadForm.teacher", movs,"" />
             <br>
-            Group:<@spring.formSingleSelect "workLoadForm.group", mavs,"" />
+            Group:<@spring.formInput "workLoadForm.group" "" "text"/>
             <br>
             Subject:<@spring.formInput "workLoadForm.subject" "" "text"/>
             <br>
