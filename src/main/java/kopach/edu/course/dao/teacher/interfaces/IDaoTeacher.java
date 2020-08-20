@@ -1,8 +1,9 @@
-package kopach.edu.course.dao.teacher.interfaces;/*
- @author Vladyslav Zaichenko
- @since 08 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
+package kopach.edu.course.dao.teacher.interfaces;
+/**
+ @author Kopach Daria
+ @date 10.08.2020
+ @version 1.0
+ Copyright (c) Kopach Daria
  Description:
  */
 

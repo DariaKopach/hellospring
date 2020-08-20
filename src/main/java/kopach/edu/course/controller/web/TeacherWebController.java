@@ -1,8 +1,9 @@
-package kopach.edu.course.controller.web;/*
- @author Vladyslav Zaichenko
- @since 09 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
+package kopach.edu.course.controller.web;
+/**
+ @author Kopach Daria
+ @date 10.08.2020
+ @version 1.0
+ Copyright (c) Kopach Daria
  Description:
  */
 
@@ -53,8 +54,10 @@ public class TeacherWebController {
     public String createTeacher(Model model, @ModelAttribute("teacherForm") TeacherForm teacherForm){
         Teacher teacher = new Teacher();
         teacher.setName(teacherForm.getName());
+        teacher.setSurname(teacherForm.getSurname());
         teacher.setDescription(teacherForm.getDescription());
         teacher.setMobile(teacherForm.getMobile());
+        teacher.setExperience(teacherForm.getExperience());
         teacherService.create(teacher);
 
         model.addAttribute("teachers",teacherService.getAll());
@@ -67,8 +70,10 @@ public class TeacherWebController {
         TeacherForm teacherForm = new TeacherForm(
              teacher.getId(),
              teacher.getName(),
+             teacher.getSurname(),
              teacher.getDescription(),
-             teacher.getMobile()
+             teacher.getMobile(),
+                teacher.getExperience()
         );
         model.addAttribute("teacherForm", teacherForm);
         return "updateTeacher";
@@ -79,8 +84,10 @@ public class TeacherWebController {
         Teacher teacher = new Teacher();
         teacher.setId(teacherForm.getId());
         teacher.setName(teacherForm.getName());
+        teacher.setSurname(teacherForm.getSurname());
         teacher.setDescription(teacherForm.getDescription());
         teacher.setMobile(teacherForm.getMobile());
+        teacher.setExperience(teacherForm.getExperience());
         teacherService.update(teacher);
 
         model.addAttribute("teacher",teacherService.getAll());

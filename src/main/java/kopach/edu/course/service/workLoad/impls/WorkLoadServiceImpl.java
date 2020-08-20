@@ -1,9 +1,10 @@
-package kopach.edu.course.service.workLoad.impls;/*
- @author Vladyslav Zaichenko
- @since 09 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
- Description:
+package kopach.edu.course.service.workLoad.impls;
+
+/**
+ @author Kopach Daria
+ @date 10.08.2020
+ @version 1.0
+ Copyright (c) Kopach Daria
  */
 
 import kopach.edu.course.datastorage.DataFake;
@@ -54,6 +55,21 @@ public class WorkLoadServiceImpl implements IWorkLoadService {
     public List<WorkLoad> getAll() {
         return workLoadRepository.findAll();
     }
+
+//    @Override
+//    public List<WorkLoad> searchByName(String str) {
+//        return null;
+//    }
+//
+//    @Override
+//    public List<WorkLoad> searchByString(String str) {
+//        return null;
+//    }
+//
+//    @Override
+//    public List<WorkLoad> sortByName(String name, String order) {
+//        return null;
+//    }
 
     public void reloadDataBase()
     {

@@ -1,9 +1,10 @@
-package kopach.edu.course.service.workLoad.interfaces;/*
- @author Vladyslav Zaichenko
- @since 09 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
- Description:
+package kopach.edu.course.service.workLoad.interfaces;
+
+/**
+ @author Kopach Daria
+ @date 10.08.2020
+ @version 1.0
+ Copyright (c) Kopach Daria
  */
 
 import kopach.edu.course.model.WorkLoad;
@@ -18,4 +19,8 @@ public interface IWorkLoadService {
     WorkLoad delete (String id);
     WorkLoad update (WorkLoad workLoad);
     List<WorkLoad> getAll();
+
+//    List<WorkLoad> searchByName(String str);
+//    List<WorkLoad> searchByString(String str);
+//    List<WorkLoad> sortByName(String name, String order);
 }

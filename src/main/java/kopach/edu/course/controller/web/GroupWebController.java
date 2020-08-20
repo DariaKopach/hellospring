@@ -1,8 +1,9 @@
-package kopach.edu.course.controller.web;/*
- @author Vladyslav Zaichenko
- @since 09 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
+package kopach.edu.course.controller.web;
+/**
+ @author Kopach Daria
+ @date 10.08.2020
+ @version 1.0
+ Copyright (c) Kopach Daria
  Description:
  */
 
@@ -55,7 +56,10 @@ public class GroupWebController {
         Group group = new Group();
         group.setName(groupForm.getName());
         group.setSpecialty(groupForm.getSpecialty());
+        group.setDepartment(groupForm.getDepartment());
         group.setDescription(groupForm.getDescription());
+        group.setAmountOfStudents(groupForm.getAmountOfStudents());
+
         groupService.create(group);
 
         model.addAttribute("group",groupService.getAll());
@@ -69,7 +73,9 @@ public class GroupWebController {
                 group.getId(),
                 group.getName(),
                 group.getSpecialty(),
-                group.getDescription()
+                group.getDepartment(),
+                group.getDescription(),
+                group.getAmountOfStudents()
         );
         model.addAttribute("groupForm", groupForm);
         return "updateGroup";
@@ -82,7 +88,9 @@ public class GroupWebController {
         group.setId(groupForm.getId());
         group.setName(groupForm.getName());
         group.setSpecialty(groupForm.getSpecialty());
+        group.setDepartment(groupForm.getDepartment());
         group.setDescription(groupForm.getDescription());
+        group.setAmountOfStudents(groupForm.getAmountOfStudents());
         groupService.update(group);
 
         model.addAttribute("group",groupService.getAll());

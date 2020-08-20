@@ -1,8 +1,9 @@
-package kopach.edu.course.controller.web;/*
- @author Vladyslav Zaichenko
- @since 09 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
+package kopach.edu.course.controller.web;
+/**
+ @author Kopach Daria
+ @date 10.08.2020
+ @version 1.0
+ Copyright (c) Kopach Daria
  Description:
  */
 
@@ -92,6 +93,9 @@ public class WorkLoadWebController {
         workLoad.setGroup(workLoadForm.getGroup());
         workLoad.setTeacher(workLoadForm.getTeacher());
         workLoad.setSubject(workLoadForm.getSubject());
+        workLoad.setTypeOfClass(workLoadForm.getTypeOfClass());
+        workLoad.setAmountOfHours(workLoadForm.getAmountOfHours());
+        workLoad.setPayment(workLoadForm.getPayment());
         workLoadService.create(workLoad);
 
         model.addAttribute("workLoads",workLoadService.getAll());

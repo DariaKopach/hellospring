@@ -1,25 +1,39 @@
 package kopach.edu.course.form;
+/**
+ @author Kopach Daria
+ @date 10.08.2020
+ @version 1.0
+ Copyright (c) Kopach Daria
+ Description:
+ */
+
 
 public class GroupForm {
     private String id;
     private String name;
     private String specialty;
+    private String department;
     private String description;
+    private int amountOfStudents;
 
     public GroupForm() {
     }
 
-    public GroupForm(String name, String specialty, String description) {
+    public GroupForm(String name, String specialty, String department, String description, int amountOfStudents) {
         this.name = name;
         this.specialty = specialty;
+        this.department = department;
         this.description = description;
+        this.amountOfStudents = amountOfStudents;
     }
 
-    public GroupForm(String id, String name, String specialty, String description) {
+    public GroupForm(String id, String name, String specialty, String department, String description, int amountOfStudents) {
         this.id = id;
         this.name = name;
         this.specialty = specialty;
+        this.department = department;
         this.description = description;
+        this.amountOfStudents = amountOfStudents;
     }
 
     public String getId() {
@@ -52,6 +66,22 @@ public class GroupForm {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getDepartment() {
+        return department;
+    }
+
+    public void setDepartment(String department) {
+        this.department = department;
+    }
+
+    public int getAmountOfStudents() {
+        return amountOfStudents;
+    }
+
+    public void setAmountOfStudents(int amountOfStudents) {
+        this.amountOfStudents = amountOfStudents;
     }
 
     @Override

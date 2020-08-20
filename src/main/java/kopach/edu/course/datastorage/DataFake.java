@@ -1,11 +1,14 @@
-package kopach.edu.course.datastorage;/*
- @author Vladyslav Zaichenko
- @since 08 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
+package kopach.edu.course.datastorage;
+/**
+ @author Kopach Daria
+ @date 10.08.2020
+ @version 1.0
+ Copyright (c) Kopach Daria
  Description:
  */
 
+import kopach.edu.course.model.SalaryCalculation;
+import kopach.edu.course.repository.SalaryCalculationRepository;
 import kopach.edu.course.repository.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -32,6 +35,9 @@ public class DataFake {
     @Autowired
     WorkLoadRepository workLoadRepository;
 
+    @Autowired
+    SalaryCalculationRepository salaryCalculationRepository;
+
     private List<Teacher> teachers = new LinkedList<>(
             Arrays.asList(
                     new Teacher("Yuriy", "Prokhorov","teacher","+42135452563",30),
@@ -56,6 +62,14 @@ public class DataFake {
             )
     );
 
+    private  List<SalaryCalculation> salaryCalculations =new LinkedList<>(
+            Arrays.asList(
+                new SalaryCalculation(teachers.get(0),2,35,6,40,310),
+                    new SalaryCalculation(teachers.get(1),2,35,6,40,310),
+                    new SalaryCalculation(teachers.get(2),2,35,6,40,310)
+                    )
+    );
+
     @PostConstruct
     public void init(){
         teacherRepository.deleteAll();
@@ -64,6 +78,10 @@ public class DataFake {
         groupRepository.saveAll(groups);
         workLoadRepository.deleteAll();
         workLoadRepository.saveAll(workLoads);
+        salaryCalculationRepository.deleteAll();
+        salaryCalculationRepository.saveAll(salaryCalculations);
+
+
     }
 
     public List<Teacher> getTeachers() {
@@ -89,4 +107,14 @@ public class DataFake {
     public void setWorkLoads(List<Group> groups) {
         this.groups = groups;
     }
+
+    public List<SalaryCalculation> getSalaryCalculations() {
+        return salaryCalculations;
+    }
+
+    public void setSalaryCalculations(List<SalaryCalculation> salaryCalculations) {
+        this.salaryCalculations = salaryCalculations;
+    }
+
+
 }

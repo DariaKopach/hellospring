@@ -10,14 +10,18 @@
 <body>
 
 <div>
-    <fieldset>
+    <fieldset >
         <legend>Add group</legend>
-        <form name="group" action="" method="POST">
+        <form style="color: hotpink" name="group" action="" method="POST">
             Name:<@spring.formInput "groupForm.name" "" "text"/>
             <br>
             Specialty:<@spring.formInput "groupForm.specialty" "" "text"/>
             <br>
+            Department:<@spring.formInput "groupForm.department" "" "text"/>
+            <br>
             Description:<@spring.formInput "groupForm.description" "" "text"/>
+            <br>
+            Amount of Students:<@spring.formInput "groupForm.amountOfStudents" "" "text"/>
             <br>
             <input type="submit" value="Create"/>
         </form>

@@ -16,7 +16,11 @@
             <br>
             Specialty:<@spring.formInput "groupForm.specialty" "" "text"/>
             <br>
+            Department:<@spring.formInput "groupForm.department" "" "text"/>
+            <br>
             Description:<@spring.formInput "groupForm.description" "" "text"/>
+            <br>
+            Amount of Students:<@spring.formInput "groupForm.amountOfStudents" "" "text"/>
             <br>
             <input type="submit" value="Update"/>
         </form>

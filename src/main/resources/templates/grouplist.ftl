@@ -9,11 +9,20 @@
 </head>
 <body>
 <div>
+    <form method="post">
+        <input type="text" value="" name="search">
+        <input type="submit" value="Go" onclick="">
+    </form>
+    <h1 style="color: crimson">
+        Group List
+    </h1>
     <table class="table table-dark">
         <tr>
             <th>Name</th>
             <th>Specialty</th>
+            <th>Department</th>
             <th>Description</th>
+            <th>Amount of Students</th>
             <th>Delete</th>
             <th>Update</th>
         </tr>
@@ -21,11 +30,13 @@
             <tr>
                 <td>${item.name}</td>
                 <td>${item.specialty}</td>
+                <td>${item.department}</td>
                 <td>${item.description}</td>
-                <td><a href="http://localhost:8080/web/group/update/${item.id}">
+                <td>${item.amountOfStudents}</td>
+                <td><a href="http://localhost:8083/web/group/update/${item.id}">
                         <input type="button" value="update" class="btn-primary"></a>
                 </td>
-                <td><a href="http://localhost:8080/web/group/delete/${item.id}">
+                <td><a href="http://localhost:8083/web/group/delete/${item.id}">
                         <input type="button" value="delete" class="btn-danger">
                     </a>
             </tr>

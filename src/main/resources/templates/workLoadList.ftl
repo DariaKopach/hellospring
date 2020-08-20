@@ -9,6 +9,15 @@
 </head>
 <body>
 <div>
+    <form method="post">
+        <input type="text" value="" name="search">
+        <input type="submit" value="Go" onclick="">
+    </form>
+
+    <h1 style="color: crimson">
+        WorkLoad List
+    </h1>
+
     <table class="table table-dark">
         <tr>
             <th>Group</th>

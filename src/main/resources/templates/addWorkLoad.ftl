@@ -10,7 +10,7 @@
 <body>
 
 <div>
-    <fieldset style="display: inline-block">
+    <fieldset class="thead-dark">
         <legend>Create WorkLoad</legend>
         <form name="workLoad" action="" method="POST">
             Teacher:<@spring.formSingleSelect "workLoadForm.teacher", movs,"" />

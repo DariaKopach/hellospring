@@ -1,8 +1,9 @@
-package kopach.edu.course.form;/*
- @author Vladyslav Zaichenko
- @since 11 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
+package kopach.edu.course.form;
+/**
+ @author Kopach Daria
+ @date 10.08.2020
+ @version 1.0
+ Copyright (c) Kopach Daria
  Description:
  */
 

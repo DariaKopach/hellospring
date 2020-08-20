@@ -1,9 +1,10 @@
-package kopach.edu.course.service.teacher.impls;/*
- @author Vladyslav Zaichenko
- @since 08 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
- Description:
+package kopach.edu.course.service.teacher.impls;
+
+/**
+ @author Kopach Daria
+ @date 10.08.2020
+ @version 1.0
+ Copyright (c) Kopach Daria
  */
 
 import kopach.edu.course.datastorage.DataFake;
@@ -54,6 +55,7 @@ public class TeacherServiceImpl implements ITeacherService {
     public List<Teacher> getAll() {
         return teacherRepository.findAll();
     }
+
 
     public void reloadDataBase()
     {

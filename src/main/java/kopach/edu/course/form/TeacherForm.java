@@ -1,31 +1,39 @@
-package kopach.edu.course.form;/*
- @author Vladyslav Zaichenko
- @since 11 сер 2020
- @version 1.0.0 
- Copyright (c) Vladyslav Zaichenko 
+package kopach.edu.course.form;
+/**
+ @author Kopach Daria
+ @date 10.08.2020
+ @version 1.0
+ Copyright (c) Kopach Daria
  Description:
  */
 
 public class TeacherForm {
     private String id;
     private String name;
+    private String surname;
     private String description;
     private String mobile;
+    private int experience;
 
     public TeacherForm() {
     }
 
-    public TeacherForm(String name, String description, String mobile) {
+    public TeacherForm(String name, String surname, String description, String mobile, int experience) {
         this.name = name;
+        this.surname = surname;
         this.description = description;
         this.mobile = mobile;
+        this.experience = experience;
     }
 
-    public TeacherForm(String id, String name, String description, String telephone) {
+
+    public TeacherForm(String id, String name, String surname, String description, String mobile, int experience) {
         this.id = id;
         this.name = name;
+        this.surname = surname;
         this.description = description;
         this.mobile = mobile;
+        this.experience = experience;
     }
 
     public String getId() {
@@ -56,8 +64,24 @@ public class TeacherForm {
         return mobile;
     }
 
-    public void setTelephone(String telephone) {
+    public void setMobile(String mobile) {
         this.mobile = mobile;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public int getExperience() {
+        return experience;
+    }
+
+    public void setExperience(int experience) {
+        this.experience = experience;
     }
 
     @Override
@@ -65,8 +89,10 @@ public class TeacherForm {
         return "TeacherForm{" +
                 "id='" + id + '\'' +
                 ", name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
                 ", description='" + description + '\'' +
-                ", telephone='" + mobile + '\'' +
+                ", mobile='" + mobile + '\'' +
+                ", experience=" + experience +
                 '}';
     }
 }

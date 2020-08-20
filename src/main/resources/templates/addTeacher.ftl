@@ -10,14 +10,18 @@
 <body>
 
 <div>
-    <fieldset>
+    <fieldset class="thead-dark">
         <legend>Add teacher</legend>
         <form name="teacher" action="" method="POST">
             Name:<@spring.formInput "teacherForm.name" "" "text"/>
             <br>
+            Surname:<@spring.formInput "teacherForm.surname" "" "text"/>
+            <br>
             Description:<@spring.formInput "teacherForm.description" "" "text"/>
             <br>
-            Chief:<@spring.formInput "teacherForm.mobile" "" "text"/>
+            Mobile:<@spring.formInput "teacherForm.mobile" "" "text"/>
+            <br>
+            Experience:<@spring.formInput "teacherForm.experience" "" "text"/>
             <br>
             <input type="submit" value="Create"/>
         </form>
